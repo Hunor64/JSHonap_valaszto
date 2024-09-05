@@ -8,13 +8,14 @@ function GenerateMothTables() {
   if (document.querySelector(".month").value != "") {
     selectedMonth = document.querySelector(".month").value
     let length = mothLength[selectedMonth]
-    for (let index = 1; index < length; index++) {
+    for (let index = 1; index < length+1; index++) {
         let row = document.createElement("div")
         let dayNumber = document.createElement("div")
         dayNumber.innerHTML = index
 
         let inputField = document.createElement("input")
 
+        row.className = "row"
         row.appendChild(dayNumber)
         row.appendChild(inputField)
         mainDiv.appendChild(row)
