@@ -1,12 +1,11 @@
 "use strict";
 let mothLength = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-let selectedMonth = 0
 
 function GenerateMothTables() {
     let mainDiv = document.querySelector(".days")
     mainDiv.innerHTML = ""
   if (document.querySelector(".month").value != "") {
-    selectedMonth = document.querySelector(".month").value
+    let selectedMonth = document.querySelector(".month").value
     let length = mothLength[selectedMonth]
     for (let index = 1; index < length+1; index++) {
         let row = document.createElement("div")
